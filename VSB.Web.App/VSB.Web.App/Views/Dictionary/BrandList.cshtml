@@ -1,0 +1,65 @@
+﻿
+@using VSB.Core.ViewModels.Dictionary
+@using VSB.Core.Common;
+
+@{
+    ViewBag.Title = "Brands";
+}
+
+<script>
+
+    function loadEditForm(url) {
+
+        $.get(url, function (data) {
+            $('#EditionPanel').replaceWith(data);
+        });
+
+        return false;
+    }
+
+    function loadModelsList(url) {
+        $.get(url, function (data) {
+            $('#pageMainContent').html(data);
+        });
+    }
+
+</script>
+
+<h2>Słownik marek</h2>
+
+<div id="TablePanel">
+    <table class="table table-striped">
+        <thead>
+            <tr><th>ID</th><th>Nazwa</th><th>Opis</th><th></th></tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Deleted</td>
+                    <td>
+                        <span class="glyphicon glyphicon-pencil"
+                              onclick="loadEditForm('@Url.Action(DictionaryController.BrandForm, DictionaryController.Dictionary, new { id = item.ID } )');"></span>
+                    </td>
+                    <td><div onclick="loadModelsList('@Url.Action(DictionaryController.ModelsListForBrand, DictionaryController.Dictionary, new {brandId = item.ID})');">
+                        <span class="glyphicon glyphicon-list"></span>Lista modeli</div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <button class="btn btn-lg btn-default" onclick="loadEditForm('@Url.Action(VSB.Core.Common.DictionaryController.BrandForm,VSB.Core.Common.DictionaryController.Dictionary)');">
+        <span class="glyphicon glyphicon-plus"></span>
+    </button>
+</div>
+
+<div class="panel panel-default">
+    <div id="EditionPanel" class="panel-body">
+        @{ Html.RenderPartial(VSB.Core.Common.DictionaryController.BrandForm, new BrandViewModel()); }
+    </div>
+</div>

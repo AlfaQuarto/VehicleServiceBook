@@ -1,0 +1,7 @@
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\bin\Debug\VSB.Core.ViewModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\bin\Debug\VSB.Core.ViewModels.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\bin\Debug\VSB.Core.Common.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\bin\Debug\VSB.Core.Common.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\obj\Debug\VSB.Core.ViewModels.csprojResolveAssemblyReference.cache
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\obj\Debug\VSB.Core.ViewModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.ViewModels\obj\Debug\VSB.Core.ViewModels.pdb

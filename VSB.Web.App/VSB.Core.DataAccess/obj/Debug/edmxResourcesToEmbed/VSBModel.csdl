@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vehicleservicebook_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="dictionary_action_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="vsb_service_action" Relationship="Self.FK_ActionTypeID" FromRole="dictionary_action_type" ToRole="vsb_service_action" />
+  </EntityType>
+  <EntityType Name="dictionary_body_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShortName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="vsb_car" Relationship="Self.FK_CarBodyTypeID" FromRole="dictionary_body_type" ToRole="vsb_car" />
+  </EntityType>
+  <EntityType Name="dictionary_brand">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="dictionary_model" Relationship="Self.FK_BrandID" FromRole="dictionary_brand" ToRole="dictionary_model" />
+    <NavigationProperty Name="vsb_vehicle" Relationship="Self.FK_VehicleBrandID" FromRole="dictionary_brand" ToRole="vsb_vehicle" />
+  </EntityType>
+  <EntityType Name="dictionary_drive_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShortName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="vsb_car" Relationship="Self.FK_CarDriveTypeID" FromRole="dictionary_drive_type" ToRole="vsb_car" />
+  </EntityType>
+  <EntityType Name="dictionary_enigine_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="vsb_car" Relationship="Self.FK_CarEngineTypeID" FromRole="dictionary_enigine_type" ToRole="vsb_car" />
+  </EntityType>
+  <EntityType Name="dictionary_model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BrandID" Type="Int32" Nullable="false" />
+    <Property Name="Delted" Type="Boolean" />
+    <NavigationProperty Name="dictionary_brand" Relationship="Self.FK_BrandID" FromRole="dictionary_model" ToRole="dictionary_brand" />
+    <NavigationProperty Name="vsb_vehicle" Relationship="Self.FK_VehicleModelID" FromRole="dictionary_model" ToRole="vsb_vehicle" />
+  </EntityType>
+  <EntityType Name="dictionary_vehicle_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="vsb_vehicle" Relationship="Self.FK_VehicleTypeID" FromRole="dictionary_vehicle_type" ToRole="vsb_vehicle" />
+  </EntityType>
+  <EntityType Name="vsb_car">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EngineTypeID" Type="Int32" Nullable="false" />
+    <Property Name="BodyTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DriveTypeID" Type="Int32" Nullable="false" />
+    <Property Name="EngineVolume" Type="Int32" />
+    <Property Name="VersionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegistrationNumber" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustomName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VIN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FirstRegistrationDate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationDate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WheelsNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dictionary_body_type" Relationship="Self.FK_CarBodyTypeID" FromRole="vsb_car" ToRole="dictionary_body_type" />
+    <NavigationProperty Name="dictionary_drive_type" Relationship="Self.FK_CarDriveTypeID" FromRole="vsb_car" ToRole="dictionary_drive_type" />
+    <NavigationProperty Name="dictionary_enigine_type" Relationship="Self.FK_CarEngineTypeID" FromRole="vsb_car" ToRole="dictionary_enigine_type" />
+    <NavigationProperty Name="vsb_vehicle" Relationship="Self.FK_CarVehicleID" FromRole="vsb_car" ToRole="vsb_vehicle" />
+  </EntityType>
+  <EntityType Name="vsb_service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Street" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StreetNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsAuthorizedService" Type="Boolean" Nullable="false" />
+    <Property Name="ServiceType" Type="Int64" Nullable="false" />
+    <Property Name="AdditionalInformation" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="vsb_service_action" Relationship="Self.FK_ServiceID" FromRole="vsb_service" ToRole="vsb_service_action" />
+  </EntityType>
+  <EntityType Name="vsb_service_action">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="ActionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="VehicleID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceID" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="OwnerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dictionary_action_type" Relationship="Self.FK_ActionTypeID" FromRole="vsb_service_action" ToRole="dictionary_action_type" />
+    <NavigationProperty Name="vsb_service" Relationship="Self.FK_ServiceID" FromRole="vsb_service_action" ToRole="vsb_service" />
+    <NavigationProperty Name="vsb_vehicle" Relationship="Self.FK_VehicleID" FromRole="vsb_service_action" ToRole="vsb_vehicle" />
+  </EntityType>
+  <EntityType Name="vsb_vehicle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandID" Type="Int32" />
+    <Property Name="ModelID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductionDate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="dictionary_brand" Relationship="Self.FK_VehicleBrandID" FromRole="vsb_vehicle" ToRole="dictionary_brand" />
+    <NavigationProperty Name="dictionary_model" Relationship="Self.FK_VehicleModelID" FromRole="vsb_vehicle" ToRole="dictionary_model" />
+    <NavigationProperty Name="dictionary_vehicle_type" Relationship="Self.FK_VehicleTypeID" FromRole="vsb_vehicle" ToRole="dictionary_vehicle_type" />
+    <NavigationProperty Name="vsb_car" Relationship="Self.FK_CarVehicleID" FromRole="vsb_vehicle" ToRole="vsb_car" />
+    <NavigationProperty Name="vsb_service_action" Relationship="Self.FK_VehicleID" FromRole="vsb_vehicle" ToRole="vsb_service_action" />
+  </EntityType>
+  <Association Name="FK_ActionTypeID">
+    <End Role="dictionary_action_type" Type="Self.dictionary_action_type" Multiplicity="1" />
+    <End Role="vsb_service_action" Type="Self.vsb_service_action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_action_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_service_action">
+        <PropertyRef Name="ActionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarBodyTypeID">
+    <End Role="dictionary_body_type" Type="Self.dictionary_body_type" Multiplicity="1" />
+    <End Role="vsb_car" Type="Self.vsb_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_body_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_car">
+        <PropertyRef Name="BodyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BrandID">
+    <End Role="dictionary_brand" Type="Self.dictionary_brand" Multiplicity="1" />
+    <End Role="dictionary_model" Type="Self.dictionary_model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="dictionary_model">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehicleBrandID">
+    <End Role="dictionary_brand" Type="Self.dictionary_brand" Multiplicity="0..1" />
+    <End Role="vsb_vehicle" Type="Self.vsb_vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_brand">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_vehicle">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarDriveTypeID">
+    <End Role="dictionary_drive_type" Type="Self.dictionary_drive_type" Multiplicity="1" />
+    <End Role="vsb_car" Type="Self.vsb_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_drive_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_car">
+        <PropertyRef Name="DriveTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarEngineTypeID">
+    <End Role="dictionary_enigine_type" Type="Self.dictionary_enigine_type" Multiplicity="1" />
+    <End Role="vsb_car" Type="Self.vsb_car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_enigine_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_car">
+        <PropertyRef Name="EngineTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehicleModelID">
+    <End Role="dictionary_model" Type="Self.dictionary_model" Multiplicity="0..1" />
+    <End Role="vsb_vehicle" Type="Self.vsb_vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_model">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_vehicle">
+        <PropertyRef Name="ModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehicleTypeID">
+    <End Role="dictionary_vehicle_type" Type="Self.dictionary_vehicle_type" Multiplicity="1" />
+    <End Role="vsb_vehicle" Type="Self.vsb_vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dictionary_vehicle_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_vehicle">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarVehicleID">
+    <End Role="vsb_vehicle" Type="Self.vsb_vehicle" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="vsb_car" Type="Self.vsb_car" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="vsb_vehicle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_car">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceID">
+    <End Role="vsb_service" Type="Self.vsb_service" Multiplicity="0..1" />
+    <End Role="vsb_service_action" Type="Self.vsb_service_action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vsb_service">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_service_action">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehicleID">
+    <End Role="vsb_vehicle" Type="Self.vsb_vehicle" Multiplicity="1" />
+    <End Role="vsb_service_action" Type="Self.vsb_service_action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vsb_vehicle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="vsb_service_action">
+        <PropertyRef Name="VehicleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="vsbDb" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dictionary_action_type" EntityType="Self.dictionary_action_type" />
+    <EntitySet Name="dictionary_body_type" EntityType="Self.dictionary_body_type" />
+    <EntitySet Name="dictionary_brand" EntityType="Self.dictionary_brand" />
+    <EntitySet Name="dictionary_drive_type" EntityType="Self.dictionary_drive_type" />
+    <EntitySet Name="dictionary_enigine_type" EntityType="Self.dictionary_enigine_type" />
+    <EntitySet Name="dictionary_model" EntityType="Self.dictionary_model" />
+    <EntitySet Name="dictionary_vehicle_type" EntityType="Self.dictionary_vehicle_type" />
+    <EntitySet Name="vsb_car" EntityType="Self.vsb_car" />
+    <EntitySet Name="vsb_service" EntityType="Self.vsb_service" />
+    <EntitySet Name="vsb_service_action" EntityType="Self.vsb_service_action" />
+    <EntitySet Name="vsb_vehicle" EntityType="Self.vsb_vehicle" />
+    <AssociationSet Name="FK_ActionTypeID" Association="Self.FK_ActionTypeID">
+      <End Role="dictionary_action_type" EntitySet="dictionary_action_type" />
+      <End Role="vsb_service_action" EntitySet="vsb_service_action" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarBodyTypeID" Association="Self.FK_CarBodyTypeID">
+      <End Role="dictionary_body_type" EntitySet="dictionary_body_type" />
+      <End Role="vsb_car" EntitySet="vsb_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BrandID" Association="Self.FK_BrandID">
+      <End Role="dictionary_brand" EntitySet="dictionary_brand" />
+      <End Role="dictionary_model" EntitySet="dictionary_model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleBrandID" Association="Self.FK_VehicleBrandID">
+      <End Role="dictionary_brand" EntitySet="dictionary_brand" />
+      <End Role="vsb_vehicle" EntitySet="vsb_vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarDriveTypeID" Association="Self.FK_CarDriveTypeID">
+      <End Role="dictionary_drive_type" EntitySet="dictionary_drive_type" />
+      <End Role="vsb_car" EntitySet="vsb_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarEngineTypeID" Association="Self.FK_CarEngineTypeID">
+      <End Role="dictionary_enigine_type" EntitySet="dictionary_enigine_type" />
+      <End Role="vsb_car" EntitySet="vsb_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleModelID" Association="Self.FK_VehicleModelID">
+      <End Role="dictionary_model" EntitySet="dictionary_model" />
+      <End Role="vsb_vehicle" EntitySet="vsb_vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleTypeID" Association="Self.FK_VehicleTypeID">
+      <End Role="dictionary_vehicle_type" EntitySet="dictionary_vehicle_type" />
+      <End Role="vsb_vehicle" EntitySet="vsb_vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarVehicleID" Association="Self.FK_CarVehicleID">
+      <End Role="vsb_vehicle" EntitySet="vsb_vehicle" />
+      <End Role="vsb_car" EntitySet="vsb_car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceID" Association="Self.FK_ServiceID">
+      <End Role="vsb_service" EntitySet="vsb_service" />
+      <End Role="vsb_service_action" EntitySet="vsb_service_action" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleID" Association="Self.FK_VehicleID">
+      <End Role="vsb_vehicle" EntitySet="vsb_vehicle" />
+      <End Role="vsb_service_action" EntitySet="vsb_service_action" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

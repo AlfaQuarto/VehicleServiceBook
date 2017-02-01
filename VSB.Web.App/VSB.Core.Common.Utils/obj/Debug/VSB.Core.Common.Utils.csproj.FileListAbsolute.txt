@@ -1,0 +1,17 @@
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.Common.Utils.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.Common.Utils.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\AutoMapper.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.BusinessModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.DataAccess.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.ViewModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\EntityFramework.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.Common.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.BusinessModels.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.DataAccess.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.ViewModels.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\AutoMapper.xml
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\EntityFramework.xml
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\bin\Debug\VSB.Core.Common.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\obj\Debug\VSB.Core.Common.Utils.csprojResolveAssemblyReference.cache
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\obj\Debug\VSB.Core.Common.Utils.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common.Utils\obj\Debug\VSB.Core.Common.Utils.pdb

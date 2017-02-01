@@ -1,0 +1,4 @@
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common\bin\Debug\VSB.Core.Common.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common\bin\Debug\VSB.Core.Common.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common\obj\Debug\VSB.Core.Common.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.Common\obj\Debug\VSB.Core.Common.pdb

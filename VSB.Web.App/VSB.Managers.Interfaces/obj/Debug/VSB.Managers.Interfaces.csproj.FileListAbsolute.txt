@@ -1,0 +1,7 @@
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\bin\Debug\VSB.Managers.Interfaces.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\bin\Debug\VSB.Managers.Interfaces.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\bin\Debug\VSB.Core.BusinessModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\bin\Debug\VSB.Core.BusinessModels.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\obj\Debug\VSB.Managers.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\obj\Debug\VSB.Managers.Interfaces.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Managers.Interfaces\obj\Debug\VSB.Managers.Interfaces.pdb

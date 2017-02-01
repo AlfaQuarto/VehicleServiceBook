@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="vehicleservicebook_dbModelStoreContainer" CdmEntityContainer="vsbDb">
+    <EntitySetMapping Name="dictionary_action_type">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_action_type">
+        <MappingFragment StoreEntitySet="dictionary_action_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary_body_type">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_body_type">
+        <MappingFragment StoreEntitySet="dictionary_body_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary_brand">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_brand">
+        <MappingFragment StoreEntitySet="dictionary_brand">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary_drive_type">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_drive_type">
+        <MappingFragment StoreEntitySet="dictionary_drive_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary_enigine_type">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_enigine_type">
+        <MappingFragment StoreEntitySet="dictionary_enigine_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary_model">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_model">
+        <MappingFragment StoreEntitySet="dictionary_model">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="Delted" ColumnName="Delted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dictionary_vehicle_type">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.dictionary_vehicle_type">
+        <MappingFragment StoreEntitySet="dictionary_vehicle_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vsb_car">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.vsb_car">
+        <MappingFragment StoreEntitySet="vsb_car">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EngineTypeID" ColumnName="EngineTypeID" />
+          <ScalarProperty Name="BodyTypeID" ColumnName="BodyTypeID" />
+          <ScalarProperty Name="DriveTypeID" ColumnName="DriveTypeID" />
+          <ScalarProperty Name="EngineVolume" ColumnName="EngineVolume" />
+          <ScalarProperty Name="VersionName" ColumnName="VersionName" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="CustomName" ColumnName="CustomName" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="FirstRegistrationDate" ColumnName="FirstRegistrationDate" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="WheelsNumber" ColumnName="WheelsNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vsb_service">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.vsb_service">
+        <MappingFragment StoreEntitySet="vsb_service">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="IsAuthorizedService" ColumnName="IsAuthorizedService" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="AdditionalInformation" ColumnName="AdditionalInformation" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vsb_service_action">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.vsb_service_action">
+        <MappingFragment StoreEntitySet="vsb_service_action">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ActionTypeID" ColumnName="ActionTypeID" />
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vsb_vehicle">
+      <EntityTypeMapping TypeName="vehicleservicebook_dbModel.vsb_vehicle">
+        <MappingFragment StoreEntitySet="vsb_vehicle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

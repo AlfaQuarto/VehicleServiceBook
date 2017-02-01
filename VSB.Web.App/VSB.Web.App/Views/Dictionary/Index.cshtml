@@ -1,0 +1,49 @@
+﻿@using VSB.Core.Common
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .sideMenuLink{
+        cursor: pointer;
+    }
+
+</style>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $(".sideMenuLink").click(function () {            
+            var url = $(this).data("url");
+
+            $.ajax(
+             {
+                 type: 'POST',
+                 dataType: 'html',
+                 url: url,
+                 success: function (result) {
+                     $("#pageMainContent").html(result);
+                 },
+                 error: function (error) {
+                     alert('Fail');
+                 }
+             });
+        });
+
+    });
+
+</script>
+
+<div class="row">
+    <div class="col-md-3" id="sideMenu">
+        <ul class="list-group">            
+            <li class="list-group-item sideMenuLink" data-url="@Url.Action(DictionaryController.ActionType,DictionaryController.Dictionary)">Akcje</li>
+            <li class="list-group-item sideMenuLink" data-url="@Url.Action(DictionaryController.BrandList,DictionaryController.Dictionary)">Marki</li>
+        </ul>
+    </div>
+    <div class="col-md-9 row" id="pageMainContent">
+        
+    </div>
+</div>

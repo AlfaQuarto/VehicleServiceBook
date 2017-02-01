@@ -1,0 +1,11 @@
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Services.Interfaces.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Services.Interfaces.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Core.BusinessModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Core.Common.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Core.ViewModels.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Core.BusinessModels.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Core.Common.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\bin\Debug\VSB.Core.ViewModels.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\obj\Debug\VSB.Services.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\obj\Debug\VSB.Services.Interfaces.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Services.Interfaces\obj\Debug\VSB.Services.Interfaces.pdb

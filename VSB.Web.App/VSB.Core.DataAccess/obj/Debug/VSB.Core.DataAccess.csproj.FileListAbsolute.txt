@@ -1,0 +1,12 @@
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\VSB.Core.DataAccess.dll.config
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\VSB.Core.DataAccess.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\VSB.Core.DataAccess.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\MySql.Data.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\obj\Debug\VSB.Core.DataAccess.dll
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\obj\Debug\VSB.Core.DataAccess.pdb
+C:\Users\micha_000\Documents\Visual Studio 2013\Projects\VSB.Web.App\VSB.Core.DataAccess\obj\Debug\VSB.Core.DataAccess.csprojResolveAssemblyReference.cache

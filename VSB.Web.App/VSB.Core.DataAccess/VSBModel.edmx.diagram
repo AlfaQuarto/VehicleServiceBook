@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2598a54a69c24fdabc923d7c427eddee" Name="Diagram1">
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_action_type" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_body_type" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_brand" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_drive_type" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_enigine_type" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_model" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.dictionary_vehicle_type" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.vsb_car" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.vsb_service" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.vsb_service_action" Width="1.5" PointX="10.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="vehicleservicebook_dbModel.vsb_vehicle" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_ActionTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_CarBodyTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_BrandID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_VehicleBrandID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_CarDriveTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_CarEngineTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_VehicleModelID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_VehicleTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_CarVehicleID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_ServiceID" ManuallyRouted="false" />
+        <AssociationConnector Association="vehicleservicebook_dbModel.FK_VehicleID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
